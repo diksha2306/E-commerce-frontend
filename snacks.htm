@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks&Beverages</title>
+    <style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+header {  
+background-color: purple;  
+/* position: fixed;   */
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 60px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 25px 0 black;  
+}  
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: white;  
+font-size: larger;
+text-decoration: none;  
+}  
+header li a:hover{
+  font-weight: bolder;
+}
+header li a:active{
+  color: black;
+}
+.head1{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgba(254, 192, 171, 0.8);
+    font-weight: bolder;
+    font-size: 50px;
+    padding: 10px;
+}
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,0.5)) ,url("images/snack_back.jpg");
+ 
+  color:rgba(0, 0, 0, 0.852);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: oblique;
+  font-size: 35px;
+}
+
+.sp1{
+    border: 2px solid rgba(149, 132, 132, 0.756);
+    border-radius: 10px;
+    padding: 10px;
+    width:250px;
+    display: inline-block;
+    margin: 13px;
+    background:linear-gradient(rgb(254, 254, 223),rgb(212, 252, 246));
+    height:380px;
+    /* position: absolute; */
+    box-shadow: 8px 8px rgb(222, 221, 221);
+    
+   
+}
+
+.sp1 img{
+    width: 60%;
+}
+
+.sp1 p{
+    text-align: left;
+    font-size:larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sp1 p span{
+    font-size: smaller;
+    font-weight: lighter;
+    font-variant: small-caps;
+    
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(141, 215, 173);
+    border-radius: 9px;
+    border-color: seagreen;
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    cursor:pointer;
+    
+}
+
+#btn{
+  width:60px;
+  height: 55px;
+  background-color: purple;
+}
+#btn :hover{
+  width: 42px;
+  height:56px;
+}
+
+
+</style>
+</head>
+<body>
+  <script src="cart.js"></script>
+  <header>  
+    <nav>  
+    <ul>  
+      <li>  
+        <a href="home.htm"><i class="fa fa-home"></i>&nbsp; HOME </a>  
+        </li> 
+    <li style='color: white; font-size: larger; text-decoration: none; '>GROCERIES >> </li>
+    <li>  
+    <a href="staples.htm" > STAPLES </a>  
+    </li>  
+    <li>  
+    <a href="snacks.htm" style="color: burlywood; "> SNACKS AND BEVERAGES </a>  
+    </li>  
+    <li> <a href="household_care.htm" > HOUSEHOLD CARE </a>  
+    </li>  
+    <li>&emsp;&emsp;&emsp;</li>
+    <li style="text-align: right;"><button id="btn" onclick="display(p1);display_cart(p1)"><i class="fa fa-shopping-cart fa-2x" id="icon" style="color:white;"></i></button></li>
+    </ul>  
+    </nav>  
+    </header>  
+    <br><br>
+    <div class="header">
+        <h1 class="content">SNACKS AND BEVERAGES</h1>
+      </div>
+      <br>
+
+      <h1 class="head1">CHIPS AND NAMKEENS</h1>
+
+      <div class="sp1">
+        <img src="images/chips1.jpg" style="position: relative; top:10px;left:50px">
+        
+        <p><br>Lays India's Magic Masala</p>
+        <p>Rs.30</p>
+        <button onclick="add(30);display_item('Lays Indias Magic Masala',30,p1);changetext(this);">ADD</button>
+        
+      </div>
+
+      <div class="sp1" style="position: relative; top: 0px">
+        <img src="images/chips2.jpg" style="position: relative; top:10px;left:50px">
+        <p><br>Lays Classic Salted</p>
+        <p>Rs.30</p>
+        <button onclick="add(30);display_item('Lays Classic Salted',30,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/chip3.jpg"style="position: relative; top:10px;left:50px">
+        <p><br>Lays Cream and Onion</p>
+        <p>Rs.30</p>
+        <button onclick="add(30);display_item('Lays Cream and Onion',30,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/chips4.jpg"style="position: relative; top:10px;left:50px">
+        <p><br>Lays Spanish Tomato Tango</p>
+        <p>Rs.30</p>
+        <button onclick="add(30);display_item('Lays Spanish Tomato Tango',30,p1);changetext(this);">ADD</button>
+      </div>
+
+   
+      <br>
+
+      <div class="sp1">
+        <img src="images/namkeen1.jpg" style="position: relative; left:50px">
+        <p>Haldiram's All In One Mixture</p>
+        <p>Rs.45</p>
+        <button onclick="add(45);display_item('Haldirams All In One Mixture',45,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top: -5px">
+        <img src="images/namkeen2.jpg" style="position: relative; left:50px" height="190px">
+        <p>Haldiram's Gujarati Mixture &emsp;</p>
+        <p>Rs.50</p>
+        <button onclick="add(50);display_item('Haldirams Gujarati Mixture',50,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top: -5px">
+        <img src="images/namkeen3.jpg"style="position: relative; left:50px" height="190px">
+        <p>Haldiram's Navrattan Mixture</p>
+        <p>Rs.46</p>
+        <button onclick="add(46);display_item('Haldirams Navrattan Mixture',46,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position:relative; top:-17px;">
+        <img src="images/namkeen4.jpg"style="position: relative; left:50px">
+        <p>Haldiram's Shahi Mixture</p>
+        <p>Rs.106</p>
+        <button onclick="add(106);display_item('Haldirams Shahi Mixture',106,p1);changetext(this);">ADD</button>
+      </div>
+
+      <h1 class="head1">BISCUITS</h1>
+
+      <div class="sp1">
+        <img src="images/biscuit1.jpg"style="position: relative; left:50px">
+        <p>Oreo Cadbury Dipped Biscuits</p>
+        <p>Rs.66<span><strike>Rs.70</strike></span> </p>
+        <button onclick="add(66);display_item('Oreo Cadbury Dipped Biscuits',66,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/biscuit2.jpg"style="position: relative; left:50px">
+        <p>UNIBIC Fruit and Nut Cookies</p>
+        <p>Rs.26 <span><strike>Rs.30</strike></span></p>
+        <button onclick="add(26);display_item('UNIBIC Fruit and Nut Cookies',26,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/biscuit3.jpg"style="position: relative; left:50px">
+        <p>Britannia Nutri Choice, Oats, Almond and Milk</p>
+        <p>Rs.22 <span><strike>Rs.25</strike></span></p>
+        <button onclick="add(22);display_item('Britannia Nutri Choice, Oats, Almond and Milk',22,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/biscuit4.jpg"style="position: relative; left:50px">
+        <p>UNIBIC Fruit and Nut Cookies</p>
+        <p>Rs.23 <span><strike>Rs.25</strike></span></p>
+        <button onclick="add(23);display_item('UNIBIC Fruit and Nut Cookies',23,p1);changetext(this);">ADD</button>
+      </div>
+    
+      <h1 class="head1">BEVERAGES</h1>
+
+      <div class="sp1">
+        <img src="images/bev1.jpg"style="position: relative; left:50px">
+        <p>Coca Cola Soft Drink, 750 mL</p>
+        <p>Rs.38<span><strike>Rs.40</strike></span> </p>
+        <button onclick="add(38);display_item('Coca Cola Soft Drink, 750 mL',38,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/bev2.jpg"style="position: relative; left:50px">
+        <p>Real Fruit Power, Mixed Fruit, 1L</p>
+        <p>Rs.99 <span><strike>Rs.118</strike></span></p>
+        <button onclick="add(99);display_item('Real Fruit Power, Mixed Fruit, 1L',99,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/bev3.jpg"style="position: relative; left:50px">
+        <p>Maaza Mango drink, 600 mL&emsp;</p>
+        <p>Rs.39 <span><strike>Rs.40</strike></span></p>
+        <button onclick="add(39);display_item('Maaza Mango drink, 600 mL',39,p1);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" >
+        <img src="images/bev4.jpg"style="position: relative; left:50px">
+        <p>Sprite Refreshing Soft Drink, 750mL</p>
+        <p>Rs.38 <span><strike>Rs.40</strike></span></p>
+        <button onclick="add(38);display_item('Sprite Refreshing Soft Drink, 750mL',38,p1);changetext(this);">ADD</button>
+      </div>
+
+      <p id="p1" style="display: none; border: dashed ;border-color: rgba(0, 0, 0, 0.7); background-color: rgba(206, 198, 198, 0.900);" ><br>CART<br><br></p>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+header {  
+background-color: purple;  
+/* position: fixed;   */
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 60px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 25px 0 black;  
+}  
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: white;  
+font-size: larger;
+text-decoration: none;  
+}  
+header li a:hover{
+  font-weight: bolder;
+}
+header li a:active{
+  color: black;
+}
+.head1{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgba(233, 254, 171, 0.8);
+    font-weight: bolder;
+    font-size: 50px;
+    padding: 10px;
+}
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background:url("images/women_fashion_back1.png");
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ height: 280px;
+  color:rgba(9, 89, 250, 0.915);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: oblique;
+  font-size: 50px;
+}
+
+.sp1{
+    border: 2px solid rgba(35, 0, 0, 0.456);
+    border-radius: 5px;
+    padding: 10px;
+    width:250px;
+    display: inline-block;
+    margin: 13px;
+  
+    background: linear-gradient(rgba(201, 222, 240,0.4),rgba(255, 197, 90,0.3));
+    height:455px;
+    /* position: absolute; */
+    box-shadow: 5px 5px #dedddd88;
+    
+   
+}
+
+.sp1 img{
+    width: 60%;
+}
+
+.sp1 p{
+    text-align: left;
+    font-size:larger;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.sp1 p span{
+    font-size: smaller;
+    font-weight: lighter;
+    font-variant: small-caps;
+    
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(149, 177, 230);
+    border-radius: 9px;
+    border-color: seagreen;
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    cursor:pointer;
+    
+}
+
+#btn{
+  width:60px;
+  height: 55px;
+  background-color: purple;
+}
+#btn :hover{
+  width: 42px;
+  height:56px;
+}
+.checked {
+                color: orange;
+            }
+.blink {
+                animation: blinker 1.5s linear infinite;
+                color: rgba(3, 9, 62, 1);
+                font-family: sans-serif;
+            }
+            @keyframes blinker {
+                50% {
+                    opacity: 0.7;
+                }
+            }
+
+
+</style>
+</head>
+<body>
+  <script src="cart.js"></script>
+  <header>  
+    <nav>  
+    <ul>  
+      <li>  
+        <a href="home.htm"><i class="fa fa-home"></i>&nbsp; HOME </a>  
+        </li>
+    <li style='color: white; font-size: larger; text-decoration: none; '>FASHION >> </li> 
+    <li>  
+    <a href="#"  style="color: burlywood;"> WOMEN'S WEAR</a>  
+    </li>  
+    <li>  
+    <a href="men.htm">MEN'S WEAR </a>  
+      
+    <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</li>
+    
+    <li style="text-align: right;"><button id="btn" onclick="display(p3);display_cart(p3)"><i class="fa fa-shopping-cart fa-2x" id="icon" style="color:white;"></i></button></li>
+    </ul>  
+    </nav>  
+    </header>  
+    <br><br>
+    <div class="header">
+        <!-- <h1 class="blink">WOMEN'S WEAR</h1> -->
+      </div>
+    
+
+      <h1 class="head1">ETHNIC WEAR</h1>
+      
+      <div class="sp1">
+        <img src="images/ethnic1.webp" style="position: relative; left:50px">
+        <p>Inddus Women Burgundy Net Sheer Sequinned Kurta Set (3 piece) with Sharara & Dupatta</p>
+        <p>Rs.2099 <span><strike>Rs.3999</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(2099);display_item('Inddus Women Burgundy Net Sheer Sequinned Kurta with Sharara & Dupatta',2099,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top: 0px">
+        <img src="images/ethnic2.webp" style="position: relative; left:50px">
+        <p>Libas Women Green & Gold Zari Woven Design Straight Kurta with Trousers & With Dupatta</p>
+        <p>Rs.3999<span><strike>Rs.4499</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(5299);display_item('Libas Women Green & Gold Zari Woven Design Straight Kurta with Trousers & With Dupatta',149,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/ethnic3.webp"style="position: relative; left:50px">
+        <p>Libas Women Orange Ethnic Motifs Printed Mirror Work Kurta with Sharara & Dupatta</p>
+        <p>Rs.4999<span><strike>Rs.5499</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(4999);display_item('Libas Orange Ethnic Motifs Printed Mirror Work Kurta with Sharara & Dupatta',179,p3);changetext(this)">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/ethnic4.webp"style="position: relative; left:50px">
+        <p>
+          Indo Era
+          Women Purple Ethnic Motifs Embroidered Gotta Patti Kurta with Trousers & With Dupatta</p>
+        <p>Rs.1499 <span><strike>Rs.1999</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(1499);display_item('Indo Era Women Purple Ethnic Motifs Embroidered Gotta Patti Kurta with Trousers & With Dupatta',109,p3);changetext(this);">ADD</button>
+      </div>
+
+   
+      <h1 class="head1">SUMMER WEAR</h1>
+
+      <div class="sp1"  style="position: relative; top:-16px;" >
+        <img src="images/summer1.webp" width="100px" style="position: relative; left:45px" >
+        <p>plusS Women Blue Floral Smocked Dress</p>
+        <p>Rs.1499 <span><strike>Rs.2499</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span></p>
+        <button  style="position: relative; bottom: 0px;"  onclick="add(1499);display_item('plusS Women Blue Floral Smocked Dress',1499,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top:-16px;">
+        <img src="images/summer2.webp" width="100"style="position: relative; left:45px">
+        <p>plusS Green Floral A-Line Dress</p>
+        <p>Rs.1199 <span><strike>Rs.1899</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button style="position: relative; bottom: 0px;"  onclick="add(1199);display_item('plusS Green Floral A-Line Dress',1199,p3);changetext(this);" >ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative;top:-17px;">
+        <img src="images/summer3.webp" width="100"style="position: relative; left:45px">
+        <p>RARE Women Floral Printed Shirt Style Top</p>
+        <p>Rs.599 <span><strike>Rs.799</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button  style="position: relative; bottom: 0px;" onclick="add(599);display_item('RARE Women Off White Floral Printed Shirt Style Top',599,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top:-15px;">
+        <img src="images/summer4.jpeg" width="100" style="position: relative; top:0px;left:45px">
+        <p>Berrylush Women Yellow Printed Top</p>
+        <p>Rs.699 <span><strike>Rs.899</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></p>
+        <button  style="position: relative; bottom: 0px;" onclick="add(699);display_item('Berrylush Women Yellow Printed Top',699,p3);changetext(this);">ADD</button>
+      </div>
+
+      <h1 class="head1">WINTER WEAR</h1>
+
+      <div class="sp1">
+        <img src="images/winter1.jpeg"style="position: relative; left:50px">
+        <p>Women Black Solid Quilted Jacket</p>
+        <p>Rs.1999 <span><strike>Rs.2399</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(1999);display_item('Women Black Solid Jacket',1999,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/winter2.jpeg"style="position: relative; left:50px">
+        <p>Women Peach-Coloured Windcheater Quilted Jacket</p>
+        <p>Rs.1399 <span><strike>Rs.1999</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(449);display_item('Women Peach-Coloured Solid Windcheater Quilted Jacket',1399,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/winter3.jpeg"style="position: relative; left:50px">
+        <p>High Neck Pink Sweater for Women</p>
+        <p>Rs.2199 <span><strike>Rs.2499</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(2199);display_item('High Neck Pink Sweater for Women',2199,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/winter4.jpeg"style="position: relative; left:50px">
+        <p>Women Blue Floral-Design Sweater</p>
+        <p>Rs.1099 <span><strike>Rs.1499</strike></span></p>
+        <p><span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span></p>
+        <button onclick="add(1099);display_item('Women Blue Floral-Design Sweater',1099,p3);changetext(this);">ADD</button>
+      </div>
+
+      <p id="p3" style="display: none; border: dashed ;border-color: rgba(0, 0, 0, 0.7); background-color: rgba(206, 198, 198, 0.900);" ><br>CART<br><br></p>
+
+    
+</body>
+</html>

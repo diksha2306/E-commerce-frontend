@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+header {  
+background-color: purple;  
+/* position: fixed;   */
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 60px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 25px 0 black;  
+}  
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: white;  
+font-size: larger;
+text-decoration: none;  
+}  
+header li a:hover{
+  font-weight: bolder;
+}
+header li a:active{
+  color: black;
+}
+.head1{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgba(254, 192, 171, 0.8);
+    font-weight: bolder;
+    font-size: 50px;
+    padding: 10px;
+}
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,0.4)) ,url("images/staple_back.jpg");
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+  color:rgba(0, 0, 0, 0.852);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: oblique;
+  font-size: 50px;
+}
+
+.sp1{
+    border: 2px solid rgba(149, 132, 132, 0.756);
+    border-radius: 10px;
+    padding: 10px;
+    width:250px;
+    display: inline-block;
+    margin: 13px;
+    height:380px;
+    background: linear-gradient(rgb(207, 249, 249),rgba(252, 241, 243, 0.788));
+    /* position: absolute; */
+    box-shadow: 8px 8px rgb(222, 221, 221);
+    
+   
+}
+
+.sp1 img{
+    width: 60%;
+}
+
+.sp1 p{
+    text-align: left;
+    font-size:larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sp1 p span{
+    font-size: smaller;
+    font-weight: lighter;
+    font-variant: small-caps;
+    
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(141, 215, 173);
+    border-radius: 9px;
+    border-color: seagreen;
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    cursor:pointer;
+    
+}
+
+#btn{
+  width:60px;
+  height: 55px;
+  background-color: purple;
+}
+#btn :hover{
+  width: 42px;
+  height:56px;
+}
+
+
+</style>
+</head>
+<body>
+  <script src="cart.js"></script>
+  <header>  
+    <nav>  
+    <ul>  
+      <li>  
+        <a href="home.htm"><i class="fa fa-home"></i>&nbsp; HOME </a>  
+        </li>
+    <li style='color: white; font-size: larger; text-decoration: none; '>GROCERIES >> </li> 
+    <li>  
+    <a href="staples.htm"  style="color: burlywood;"> STAPLES </a>  
+    </li>  
+    <li>  
+    <a href="snacks.htm"> SNACKS AND BEVERAGES </a>  
+    </li>  
+    <li> <a href="household_care.htm" > HOUSEHOLD CARE </a>  
+    </li>  
+    <li>&emsp;&emsp;&emsp;</li>
+    
+    <li style="text-align: right;"><button id="btn" onclick="display(p3);display_cart(p3)"><i class="fa fa-shopping-cart fa-2x" id="icon" style="color:white;"></i></button></li>
+    </ul>  
+    </nav>  
+    </header>  
+    <br><br>
+    <div class="header">
+        <h1>STAPLES</h1>
+      </div>
+    
+
+      <h1 class="head1">PULSES</h1>
+      <!-- <p id="para"></p>
+      <button onclick="display_cart(para)">click</button> -->
+      <div class="sp1">
+        <img src="images/rajma.jpg" style="position: relative; left:50px">
+        <p>TATA Sampann Unplolished Rajma</p>
+        <p>Rs.219 <span><strike>Rs.239</strike></span></p>
+        <button onclick="add(219);display_item('TATA Sampann Unplolished Rajma',219,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top: 0px">
+        <img src="images/moong_dal.jpg" style="position: relative; left:50px">
+        <p>TATA Sampann Unplolished Moong Dal</p>
+        <p>Rs.149 <span><strike>Rs.169</strike></span></p>
+        <button onclick="add(149);display_item('TATA Sampann Moong Dal',149,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/toor_arhar_dal.jpg"style="position: relative; left:50px">
+        <p>TATA Sampann Unplolished Toor Dal</p>
+        <p>Rs.159 <span><strike>Rs.179</strike></span></p>
+        <button onclick="add(159);display_item('TATA Sampann Unplolished Toor Dal',179,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/chana_dal.jpg"style="position: relative; left:50px">
+        <p>TATA Sampann Unplolished Chana Dal</p>
+        <p>Rs.109 <span><strike>Rs.119</strike></span></p>
+        <button onclick="add(109);display_item('TATA Sampann Unplolished Chana Dal',109,p3);changetext(this);">ADD</button>
+      </div>
+
+   
+      <h1 class="head1">FLOURS</h1>
+
+      <div class="sp1"  style="position: relative; top:-16px; " >
+        <img src="images/atta.jpg" width="100px"style="position:relative; left:45px;">
+        <p>Fortune Chakki Fresh Atta</p>
+        <p>Rs.499 <span><strike>Rs.529</strike></span></p>
+        <button  style="position: relative; bottom: -20px;"  onclick="add(529);display_item('Fortune Chakki Fresh Atta',499,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top:-16px;">
+        <img src="images/besan.jpg" width="100"style="position:relative; left:45px;">
+        <p>Fortune Besan</p>
+        <p>Rs.119 <span><strike>Rs.139</strike></span></p>
+        <button style="position: relative; bottom: -20px;"  onclick="add(119);display_item('Fortune Besan',119,p3);changetext(this);" >ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top:-15px;">
+        <img src="images/maida.jpg" height="180px" style="position:relative; left:45px;">
+        <p>Fortune Maida</p>
+        <p>Rs.32 <span><strike>Rs.36</strike></span></p>
+        <button  style="position: relative; bottom: -20px;" onclick="add(32);display_item('Fortune Maida',32,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top:-25px;">
+        <img src="images/sooji.jpg "height="150" style="position: relative; top:10px; left:45px">
+        <p><br>Rajdhani Sooji</p>
+        <p>Rs.29 <span><strike>Rs.39</strike></span></p>
+        <button  style="position: relative; bottom: -30px;" onclick="add(29);display_item('Rajdhani Sooji',29,p3);changetext(this);">ADD</button>
+      </div>
+
+      <h1 class="head1">RICE</h1>
+
+      <div class="sp1">
+        <img src="images/rice1.jpg"style="position: relative; left:50px">
+        <p>India Gate Basmati Rice Classic,1Kg</p>
+        <p>Rs.169 <span><strike>Rs.219</strike></span></p>
+        <button onclick="add(169);display_item('India Gate Basmati Rice Classic,1Kg',169,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/rice2.jpg"style="position: relative; left:50px">
+        <p>India Gate Basmati Rice Rozana, 5 Kg</p>
+        <p>Rs.449 <span><strike>Rs.489</strike></span></p>
+        <button onclick="add(449);display_item('India Gate Basmati Rice Rozana, 5 Kg',449,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/rice3.jpg"style="position: relative; left:50px">
+        <p>India Gate Basmati Rice Super, 5 Kg</p>
+        <p>Rs.819 <span><strike>Rs.859</strike></span></p>
+        <button onclick="add(819);display_item('India Gate Basmati Rice Super, 5 Kg',819,p3);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/rice4.jpg"style="position: relative; left:50px">
+        <p>India Gate Basmati Rice Dubar, 1 Kg</p>
+        <p>Rs.129 <span><strike>Rs.139</strike></span></p>
+        <button onclick="add(139);display_item('India Gate Basmati Rice Dubar, 1 Kg',129,p3);changetext(this);">ADD</button>
+      </div>
+
+      <p id="p3" style="display: none; border: dashed ;border-color: rgba(0, 0, 0, 0.7); background-color: rgba(206, 198, 198, 0.900);" ><br>CART<br><br></p>
+
+    
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Household Care</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {  
+background-color: purple;  
+/* position: fixed;   */
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 60px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 25px 0 black;  
+}  
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: white;  
+font-size:larger;
+text-decoration: none;  
+}  
+header li a:hover{
+  font-weight: bolder;
+}
+header li a:active{
+  color: black;
+}
+.head1{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgba(254, 192, 171, 0.8);
+    font-weight: bolder;
+    font-size: 50px;
+    padding: 10px;
+}
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)) ,url("images/household_care_back.jpg");
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+  color:rgba(0, 0, 0, 0.852);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: oblique;
+  font-size: 40px;
+}
+
+.sp1{
+    border: 2px solid rgba(149, 132, 132, 0.756);
+    border-radius: 10px;
+    padding: 10px;
+    width:250px;
+    display: inline-block;
+    margin: 13px;
+    background: linear-gradient(rgba(255, 206, 255,0.6),rgba(247, 175, 43,0.2));
+    height:380px;
+    /* position: absolute; */
+    box-shadow: 8px 8px rgb(222, 221, 221);
+    
+   
+}
+
+.sp1 img{
+    width: 60%;
+}
+
+.sp1 p{
+    text-align: left;
+    font-size:larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sp1 p span{
+    font-size: smaller;
+    font-weight: lighter;
+    font-variant: small-caps;
+    
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(141, 215, 173);
+    border-radius: 9px;
+    border-color: seagreen;
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    cursor:pointer;
+    
+}
+
+#btn{
+  width:60px;
+  height: 55px;
+  background-color: purple;
+}
+#btn :hover{
+  width: 42px;
+  height:56px;
+}
+
+</style>
+</head>
+<body>
+  <script src="cart.js"></script>
+  <header>
+    <script src="cart.js"></script>  
+    <nav>  
+    <ul>  
+    <li>  
+    <a href="home.htm"><i class="fa fa-home"></i>&nbsp; HOME </a>  
+    </li>  
+    <li style='color: white; font-size: larger; text-decoration: none; '>GROCERIES >> </li>
+    <li>  
+    <a href="staples.htm"> STAPLES </a>  
+    </li>  
+    <li>  
+    <a href="snacks.htm"> SNACKS AND BEVERAGES </a>  
+    </li>  
+    <li> <a href="household_care.htm"  style="color: burlywood;"> HOUSEHOLD CARE </a>  
+    </li>  
+    <li>&emsp;&emsp;&emsp;</li>
+    
+    <li style="text-align: right;"><button id="btn" onclick="display(p2);display_cart(p2)"><i class="fa fa-shopping-cart fa-2x" id="icon" style="color:white;"></i></button></li>
+   
+    </ul>  
+    </nav>  
+    </header>  
+    <br><br>
+    <div class="header">
+        <h1 class="content">HOUSEHOLD CARE</h1>
+      </div>
+      
+
+      <h1 class="head1">UTENSIL CLEANERS</h1>
+
+      <div class="sp1">
+        <img src="images/household1.jpg" style="position: relative; top:10px;left:50px">
+        <p>Vim DishWash Liquid Gel, 500mL</p>
+        <p>Rs.95<span><strike>Rs.119</strike></span></p>
+        <button onclick="add(95);display_item('Vim DishWash Liquid Gel, 500mL',95,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" style="position: relative; top: 0px">
+        <img src="images/household2.jpg" style="position: relative; top:10px;left:50px">
+        <p>Vim Dishwash Bar, 125g [Pack of 12]</p>
+        <p>Rs.110<strike>Rs.120</strike></span></p>
+        <button onclick="add(110);display_item('Vim Dishwash Bar, 125g [Pack of 12]',110,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/household3.jpg"style="position: relative; top:10px;left:50px"">
+        <p>Scotch-Brite Scrub 5 Pad (Green)</p>
+        <p>Rs.75</p>
+        <button onclick="add(75);display_item('Scotch-Brite Scrub 5 Pad (Green)',75,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/household4.jpg"style="position: relative; top:10px;left:50px"">
+        <p>Scotch-Brite Stainless Steel Scrub Pad pack</p>
+        <p>Rs.155<strike>Rs.189</strike></span></p>
+        <button onclick="add(155);display_item('Scotch-Brite Stainless Steel Scrub Pad pack',155,p2);changetext(this);">ADD</button>
+      </div>
+
+   
+      
+
+      <h1 class="head1">FLOOR AND OTHER CLEANERS</h1>
+
+      <div class="sp1">
+        <img src="images/floor1.jpeg"style="position: relative; left:50px">
+        <p>Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus 500ml</p>
+        <p>Rs.99<span><strike>Rs.103</strike></span> </p>
+        <button onclick="add(99);display_item('Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus 500ml',99,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/floor2.jpeg"style="position: relative; left:50px">
+        <p>Harpic Disinfectant Bathroom Cleaner Liquid, Lemon 1L</p>
+        <p>Rs.160 <span><strike>Rs.180</strike></span></p>
+        <button onclick="add(160);display_item('Harpic Disinfectant Bathroom Cleaner Liquid, Lemon 1L',160,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/floor3.jpeg"style="position: relative; left:50px">
+        <p>Harpic Powerplus Toilet Cleaner Liquid, Rose, &emsp;&emsp;&emsp;1L </p>
+        <p>Rs.170 <span><strike>Rs.205</strike></span></p>
+        <button onclick="add(170);display_item('Harpic Powerplus Toilet Cleaner Liquid, Rose, 1L',170,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/floor4.jpeg"style="position: relative; left:50px">
+        <p>Colin Glass and Surface Cleaner Liquid Spray, Regular - 500ml</p>
+        <p>Rs.90 <span><strike>Rs.95</strike></span></p>
+        <button onclick="add(90);display_item('Colin Glass and Surface Cleaner Liquid Spray, Regular - 500ml',90,p2);changetext(this);">ADD</button>
+      </div>
+    
+      <h1 class="head1">REPELLANTS AND FRESHENERS</h1>
+
+      <div class="sp1">
+        <img src="images/freshener1.jpeg"style="position: relative; left:50px">
+        <p>Odonil Bathroom Air Freshener Blocks - Lavender Meadows - 75g</p>
+        <p>Rs.70<span><strike>Rs.90</strike></span> </p>
+        <button onclick="add(70);display_item('Odonil Bathroom Air Freshener Blocks - Lavender Meadows - 75g',70,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/freshener2.jpeg"style="position: relative; left:50px">
+        <p>Godrej aer pocket, Bathroom Air Fragrance - Petal Crush Pink (10g)</p>
+        <p>Rs.55 <span><strike>Rs.60</strike></span></p>
+        <button onclick="add(55);display_item('Godrej aer pocket, Bathroom Air Fragrance - Petal Crush Pink (10g)',55,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1">
+        <img src="images/freshener3.jpeg"style="position: relative; left:50px">
+        <p>Good knight Gold Flash Liquid Vapourizer | Mosquito Repellent Combo</p>
+        <p>Rs.238 <span><strike>Rs.267</strike></span></p>
+        <button onclick="add(238);display_item('Good knight Gold Flash Liquid Vapourizer | Mosquito Repellent Combo',238,p2);changetext(this);">ADD</button>
+      </div>
+
+      <div class="sp1" >
+        <img src="images/freshener4.jpeg"style="position: relative; left:50px">
+        <p>Godrej aer spray, Air Freshener for Home & Office | Pack of 2 (220 ml each)</p>
+        <p>Rs.280 <span><strike>Rs.330</strike></span></p>
+        <button onclick="add(280);display_item('Godrej aer spray, Air Freshener for Home & Office | Pack of 2 (220 ml each)',280,p2);changetext(this);">ADD</button>
+      </div>
+
+      <p id="p2" style="display: none; border: dashed ;border-color: rgba(0, 0, 0, 0.7); background-color: rgba(206, 198, 198, 0.900);" ><br>CART<br><br></p>
+
+</body>
+</html>

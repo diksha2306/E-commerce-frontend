@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laptops</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                margin:0;
+            }
+            header {  
+                background-color: purple;  
+                /* position: fixed;   */
+                left: 0;  
+                right: 0;  
+                top: 5px;  
+                height: 60px;  
+                display: flex;  
+                align-items: center;  
+                box-shadow: 0 0 25px 0 black;  
+            }  
+            header * {      
+            display: inline;  
+            }  
+            header li {  
+                margin: 20px;  
+            }  
+            header li a {  
+                color: white;  
+                font-size:larger;
+                text-decoration: none;  
+            }   
+            header li a:hover{
+                font-weight: bolder;
+            }
+            header li a:active{
+                color: black;
+            }
+            .checked {
+                color: orange;
+            }
+            #btn{
+                padding: 10px;
+                background-color:rgb(145, 179, 240);
+                color: rgb(108, 7, 202);
+                position:relative;
+                left:60px;
+                bottom:10px;
+                
+        
+            }
+
+            div{
+                background-color:bisque;
+                padding:20px;
+                margin:20px 80px 20px 80px;
+                width:200px;
+                height:400px;
+                font-weight:100;
+                color:darkcyan;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius:20px;
+                display:inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul>  
+                <li>  
+                    <a href="home.htm"><i class="fa fa-home"></i>&nbsp; HOME </a>  
+                </li>
+                <li style='color: white; font-size: larger; text-decoration: none; '>FASHION >> </li> 
+                <li>  
+                    <a href="fashion_women.htm"> WOMEN </a>  
+                </li>  
+                <li>  
+                    <a href="men.htm" style="color: burlywood;">MEN</a>  
+                </li>  
+                <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</li>
+                <li style="color: white; font-size: larger; text-decoration: none; text-align: right;"><a href="#carttotal"><i class="fa fa-shopping-cart fa-2x" style="color:white;"></i></a>&nbsp; CART</a></li>
+              
+            </ul>
+            </header>
+            <p>
+                <img src="images/menback.jpg" alt="backgrd" style="width:100%; height:500px"/>
+                <!-- <h2 style="color:darkred; font-size:70px; position:absolute; top:350px; left:37%"><i>LAPTOPS</i></h2> -->
+            </p>
+            <!-- product cards -->
+        <div id ="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+
+        
+        <!-- <button type="button" onclick="add(20)">click me</button> -->
+        <p id="mycart" style="width:100%;padding:10px;background-color:rgb(186, 19, 142);letter-spacing:2px;text-align:center;color:aliceblue;;font-size:larger">
+            <span id="carttotal" ></span>
+            <span id="cartvalue"></span>
+        </p>
+
+        <script>
+            // object constructor for all laptop products
+            function Men_wear (src,name,rating,oldprice,newprice){
+                this.src=src;
+                this.name=name;
+                this.rating=rating;
+                this.oldprice=oldprice;
+                this.newprice=newprice;
+             
+            }
+
+            let cost=0;
+            // document.getElementById("mycart").innerHTML="CART"+"<br>";
+            document.getElementById("carttotal").innerHTML="<br>" + "CART TOTAL: " + "<br>"+ "Rs.";
+            
+            function add(price){
+                cost += price;
+            }
+            display();
+            function display(){
+                document.getElementById("cartvalue").innerHTML=cost;
+                // document.getElementById("mycart").innerHTML += name + " : " + price;
+                // document.getElementById("mycart").innerHTML += "<br>" + "CART TOTAL: " + cost;
+            }
+            
+            // array of laptop products
+            const laptop1=new Men_wear("images/men10.png","Nike Full Sleeves Slim Fit Casual Jacket",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.600","499");
+            const laptop2=new Men_wear("images/men11.png","Ketch Men Navy/Mustard Slim Fit Checked Shirt",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>'
+            ,"Rs.899","405");
+            const laptop3=new Men_wear("images/men12.webp","Adidas Black and White Printed Casual Shirt",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.999","925");
+            const laptop4=new Men_wear("images/men1.png","Tri-color Slim Fit Casual T-shirt with Collar",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>'
+            ,"Rs.600","500");
+            const laptop5=new Men_wear("images/men2.jpg","Urbano Men's Printed Slim Fit Cotton T-Shirt",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.499","300");
+            const laptop6=new Men_wear("images/men8.jpg","Maroon Formal Slim Fit Shirt with Frontside Buttons",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.999","899");
+            const array=[laptop1,laptop2,laptop3,laptop4,laptop5,laptop6];
+            for(let i=0;i<array.length;i++){
+                let num=i+1;
+                let id="box"+num.toString();
+                document.getElementById(id).innerHTML = `<img src=${array[i].src} />` + "<br>" +"<br>"+ `<b>${array[i].name}</b>`;
+                document.getElementById(id).innerHTML+= "<br>" +array[i].rating + "<br>" + "Rs." + array[i].newprice + "<br>" + `M.R.P: <del>${array[i].oldprice}</del>`;
+                document.getElementById(id).innerHTML += `<button id="btn" onclick="add(${array[i].newprice});display()">ADD</button>`
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Laptops</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                margin:0;
+            }
+            header {  
+                background-color: purple;  
+                /* position: fixed;   */
+                left: 0;  
+                right: 0;  
+                top: 5px;  
+                height: 60px;  
+                display: flex;  
+                align-items: center;  
+                box-shadow: 0 0 25px 0 black;  
+            }  
+            header * {      
+            display: inline;  
+            }  
+            header li {  
+                margin: 20px;  
+            }  
+            header li a {  
+                color: white;  
+                font-size:larger;
+                text-decoration: none;  
+            }   
+            header li a:hover{
+                font-weight: bolder;
+            }
+            header li a:active{
+                color: black;
+            }
+            .checked {
+                color: orange;
+            }
+            #btn{
+                padding: 10px;
+                background-color:rgb(145, 179, 240);
+                color: rgb(108, 7, 202);
+                position:relative;
+                left:60px;
+                bottom:10px;
+                
+        
+            }
+            /* ul{
+                list-style-type:none;
+                padding:10px;
+                overflow:hidden;
+                background-color:cornflowerblue;
+                
+            }
+            li{
+                float:left;
+            }
+            li a{
+                display:block;
+                color:white;
+                text-decoration:none;
+                padding:10px;
+                padding-left: 50px;
+            }
+            li a:hover{
+                background-color:rgba(150,150,150,0.5);
+                color:white;
+            } */
+            div{
+                background-color:bisque;
+                padding:20px;
+                margin:10px 60px 10px 60px;
+                width:235px;
+                height:350px;
+                font-weight:100;
+                color:darkcyan;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius:20px;
+                display:inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- navigation bar
+        <ul>
+            <li><a href="laptops.html" target="_self">Laptops</a></li>
+            <li><a href="tv.html">TV</a></li>
+        </ul> -->
+        <header>
+        <ul>  
+            <li>  
+                <a href="home.htm"><i class="fa fa-home"></i>&nbsp; HOME </a>  
+            </li>
+            <li style='color: white; font-size: larger; text-decoration: none; '>ELECTRONICS >> </li> 
+            <li>  
+                <a href="laptops.htm"  style="color: burlywood;"> LAPTOPS </a>  
+            </li>  
+            <li>  
+                <a href="tv.htm">TV</a>  
+            </li>  
+            <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</li>
+            <li style="color: white; font-size: larger; text-decoration: none; text-align: right;"><a href="#carttotal"><i class="fa fa-shopping-cart fa-2x" onclick="display()" style="color:white;"></i></a>&nbsp; CART</a></li>
+          
+        </ul>
+        </header>
+        <p>
+            <img src="images/Picture2.jpg" alt="backgrd" style="width:100%; height:450px"/>
+            <h2 style="color:darkred; font-size:70px; position:absolute; top:350px; left:37%"><i>LAPTOPS</i></h2>
+        </p>
+
+        <!-- product cards -->
+        <div id ="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+
+        <!-- <button type="button" onclick="add(20)">click me</button> -->
+        <!-- <p id="mycart"></p> -->
+        <p id="mycart" style="width:100%;padding:10px;background-color:rgb(186, 19, 142);letter-spacing:2px;text-align:center;color:aliceblue;;font-size:larger">
+        <span id="carttotal" ></span>
+        <span id="cartvalue"></span>
+        </p>
+        <script>
+            // object constructor for all laptop products
+            function Laptop (src,name,rating,oldprice,newprice){
+                this.src=src;
+                this.name=name;
+                this.rating=rating;
+                this.oldprice=oldprice;
+                this.newprice=newprice;
+             
+            }
+            let cost=0;
+            // document.getElementById("mycart").innerHTML="CART"+"<br>";
+            document.getElementById("carttotal").innerHTML="<br>" + "CART TOTAL: " + "<br>"+ "Rs.";
+            
+            function add(price){
+                cost += price;
+            }
+            display();
+            function display(){
+                document.getElementById("cartvalue").innerHTML=cost;
+                // document.getElementById("mycart").innerHTML += name + " : " + price;
+                // document.getElementById("mycart").innerHTML += "<br>" + "CART TOTAL: " + cost;
+            }
+            
+            // array of laptop products
+            const laptop1=new Laptop("images/laptop1.jpg","Lenovo IdeaPad 3 Celeron Dual Core 4th Gen - (4 GB/256 GB SSD/Windows 11 Home)",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.60000","45999");
+            const laptop2=new Laptop("images/laptop2.jpg","ASUS Vivobook Intel Core i5 11th gen 8GB/256GB 1tb hdd 15.6 inches Oled",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>'
+            ,"Rs.89999","60000");
+            const laptop3=new Laptop("images/laptop3.jpg","HP 15s 12th Gen Intel Core i5 8GB RAM/512GB SSD 15.6inches(39.6cm)",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.75999","61925");
+            const laptop4=new Laptop("images/laptop5.jpg","Dell 14 Intel i5 14 inches FHD Display 16Gb RAM, 512Gb SSD,Win 11 + MSO'21",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>'
+            ,"Rs.55999","51925");
+            const laptop5=new Laptop("images/laptop6.png","Apple MacBook Air Laptop:13.3-inch Retina Display,8GB RAM,256GB SSD",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.99999","89999");
+            const laptop6=new Laptop("images/laptop7.png","Acer Extensa 15 Lightweight Laptop Intel Core i5 11th Gen (8 GB/ 512 GB SSD)",'<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>'
+            ,"Rs.45999","41925");
+            const array=[laptop1,laptop2,laptop3,laptop4,laptop5,laptop6];
+            for(let i=0;i<array.length;i++){
+                let num=i+1;
+                let id="box"+num.toString();
+                document.getElementById(id).innerHTML = `<img src=${array[i].src} />` + "<br>" +"<br>"+ `<b>${array[i].name}</b>`;
+                document.getElementById(id).innerHTML+= "<br>" +array[i].rating + "<br>" + "Rs." +array[i].newprice + "<br>" + `M.R.P: <del>${array[i].oldprice}</del>`;
+                document.getElementById(id).innerHTML += `<button id="btn" onclick="add(${array[i].newprice});display()">ADD</button>`
+            }
+            
+            
+        </script>
+    </body>
+</html>
